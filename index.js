@@ -4,7 +4,7 @@ const { createFile, listFiles } = require('./utils/filesys');
 const app = express();
 const PORT = 3000;
 
-// Endpoint to create a new text file
+
 app.post('/create-file', (req, res) => {
     try {
         const fileName = createFile();
@@ -15,7 +15,7 @@ app.post('/create-file', (req, res) => {
     }
 });
 
-// Endpoint to list all text files
+
 app.get('/list-files', (req, res) => {
     try {
         const files = listFiles();
@@ -26,7 +26,7 @@ app.get('/list-files', (req, res) => {
     }
 });
 
-// Start the server
+
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
